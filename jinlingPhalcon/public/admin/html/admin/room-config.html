@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+	<link href="http://cdn7.jinxidao.com/dvb/admin/css/common_6fe.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="http://cdn7.jinxidao.com/dvb/admin/js/ieonly_15a.js"></script>
+	<link href="http://cdn7.jinxidao.com/dvb/proxy/cross-domain/respond-proxy-html.html" id="respond-proxy" rel="respond-proxy" />
+	<link href="/proxy/local/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+	<script src="/proxy/local/respond.proxy.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div class="doc">
+		<div class="doc-header">
+	<div class="pagewraper">
+		<div class="logoblock">
+			<a href="" class="link">凤池岛度假酒店</a>
+			管理后台
+		</div>
+		<div class="userblock">
+			<span class="loginname">欢迎您，<span>长隆酒店集团</span></span>
+			<a href="" class="logout">[退出]</a>
+		</div>
+	</div>
+</div>
+<div class="doc-menu">
+	<div class="mainmenu">
+		<div class="pagewraper">
+			<a href="" class="current">首页</a>
+			<a href="">订单管理</a>
+			<a href="">房态维护</a>
+			<a href="">消费券管理</a>
+			<a href="">财务管理</a>
+			<a href="">用户管理</a>
+			<a href="">模板管理</a>
+			<a href="">配置项管理</a>
+		</div>
+	</div>
+	<div class="secondmenu">
+		<div class="pagewraper">
+			<a href="" class="current">券记录查询</a>
+			<a href="">批量生成券号</a>
+			<a href="">票号导入</a>
+		</div>
+	</div>
+</div>
+		<main class="doc-main">
+			<div class="doc-content pagewraper">
+				<div class="doc-title header-dividing">页面标题</div>
+				<form class="form-inline mb30" action="" method="get">
+					<div class="alert alert-warning with-icon">
+						<i class="icon icon-exclamation-sign"></i>
+						<div class="content clearfix">
+							<span class="lineheight-btn pull-left">选房功能状态：<b>开放选房中</b></span>
+							<button class="btn btn-danger pull-right" type="submit">暂停</button>
+							<button class="btn btn-info pull-right" type="submit">开放</button>
+						</div>
+					</div>
+				</form>
+				<div class="mb30">
+					<a href="javascript:;" class="btn btn-primary" id="j-btnadd"><i class="icon icon-plus"></i> 新增楼层</a>
+				</div>
+				<table class="table table-hover table-condensed table-vm table-center table-bordered">
+					<colgroup>
+						<col width="100">
+						<col width="180" span="4">
+						<col width="100">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>楼层 </th>
+							<th>房型</th>
+							<th>房间编号</th>
+							<th>分布图</th>
+							<th>状态</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="2">1F</td>
+							<td>海景双床房</td>
+							<td>102、104、105</td>
+							<td rowspan="2"><img src="http://dummyimage.com/160x120/FF80C0/fff" alt="" /></td>
+							<td>生效中</td>
+							<td class="action"><a class="j-edit" href="javascript:;">编辑</a> <a class="j-delete" href="javascript:;">删除</a></td>
+						</tr>
+						<tr>
+							<td>海景双床房</td>
+							<td>102、104、105</td>
+							<td>生效中</td>
+							<td class="action"><a class="j-edit" href="javascript:;">编辑</a> <a class="j-delete" href="javascript:;">删除</a></td>
+						</tr>
+						<tr>
+							<td>2F</td>
+							<td>海景双床房</td>
+							<td>102、104、105</td>
+							<td></td>
+							<td>生效中</td>
+							<td class="action"><a class="j-edit" href="javascript:;">编辑</a> <a class="j-delete" href="javascript:;">删除</a></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="mb10">
+					<span id="j-updateopen" class="webuploader-wrap"><button class="btn btn-success btn-md">添加图片</button></span>
+				</div>
+				<div class="cards rows" id="imglist">
+					<div class="col-md-2 imgitem">
+						<a href="javascript:;" class="card mb5">
+							<img src="http://dummyimage.com/160x120/FF80C0/fff" alt="" style="width:100%">
+							<span class="caption"><span class="result"></span><i class="j-delimg icon icon-trash pull-right" style="margin-top:3px"></i></span>
+						</a>
+					</div>
+					<div class="col-md-2 imgitem">
+						<a href="javascript:;" class="card mb5">
+							<img src="http://dummyimage.com/160x120/FF80C0/fff" alt="" style="width:100%">
+							<span class="caption"><span class="result"></span><i class="j-delimg icon icon-trash pull-right" style="margin-top:3px"></i></span>
+						</a>
+					</div>
+					<div class="col-md-2 imgitem">
+						<a href="javascript:;" class="card mb5">
+							<img src="http://dummyimage.com/160x120/FF80C0/fff" alt="" style="width:100%">
+							<span class="caption"><span class="result"></span><i class="j-delimg icon icon-trash pull-right" style="margin-top:3px"></i></span>
+						</a>
+					</div>
+				</div>
+				<div class="text-center mb50">
+					<button class="btn btn-primary" type="submit">保存</button>
+					<a href="" class="btn">取消</a>
+				</div>
+			</div>
+		</main>
+		<div class="doc-footer">
+	<div class="pagewraper">
+			中华人民共和国增值电信业务经营许可证 经营许可证编号：粤B2-20130613
+			<br />
+			旅行社业务经营许可证编号：L-GD01685
+			<br />
+			版权所有  广州酷旅旅行社有限公司 2009-2015 粤ICP备11008339号
+	</div>
+</div>
+	</div>
+</body>
+<script>
+var pageGlobal = {
+	host: ""
+}
+</script>
+<script src="http://cdn7.jinxidao.com/dvb/admin/js/common_de9.js"></script>
+<script src="http://cdn7.jinxidao.com/dvb/admin/js/product-edit_e44.js"></script>
+</html>

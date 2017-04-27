@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+	<link href="http://cdn7.jinxidao.com/dvb/admin/css/common_6fe.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="http://cdn7.jinxidao.com/dvb/admin/js/ieonly_15a.js"></script>
+	<link href="http://cdn7.jinxidao.com/dvb/proxy/cross-domain/respond-proxy-html.html" id="respond-proxy" rel="respond-proxy" />
+	<link href="/proxy/local/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+	<script src="/proxy/local/respond.proxy.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div class="doc">
+		<div class="doc-header">
+	<div class="pagewraper">
+		<div class="logoblock">
+			<a href="" class="link">凤池岛度假酒店</a>
+			管理后台
+		</div>
+		<div class="userblock">
+			<span class="loginname">欢迎您，<span>长隆酒店集团</span></span>
+			<a href="" class="logout">[退出]</a>
+		</div>
+	</div>
+</div>
+<div class="doc-menu">
+	<div class="mainmenu">
+		<div class="pagewraper">
+			<a href="" class="current">首页</a>
+			<a href="">订单管理</a>
+			<a href="">房态维护</a>
+			<a href="">消费券管理</a>
+			<a href="">财务管理</a>
+			<a href="">用户管理</a>
+			<a href="">模板管理</a>
+			<a href="">配置项管理</a>
+		</div>
+	</div>
+	<div class="secondmenu">
+		<div class="pagewraper">
+			<a href="" class="current">券记录查询</a>
+			<a href="">批量生成券号</a>
+			<a href="">票号导入</a>
+		</div>
+	</div>
+</div>
+		<main class="doc-main">
+			<div class="doc-content pagewraper">
+				<div class="doc-title header-dividing">页面标题</div>
+				<form class="form-horizontal mb50" name="searchForm" id="searchForm" method="get" action="">
+				<div class="form-group">
+					<label class="col-sm-1 control-label">入住日期：</label>
+					<div class="col-sm-4 form-inline">
+						<input class="form-control form-control-datetime" type="text" id="from" name="from">
+						-
+						<input class="form-control form-control-datetime" type="text" id="to" name="to">
+					</div>
+					<label class="col-sm-1 control-label">订单状态：</label>
+					<div class="col-sm-3">
+						<select class="form-control form-control-select" name="status" id="status">
+							<option value="All" selected>全部</option>
+							<option value="UnReadUnHandle" >未读</option>
+							<option value="Readed" >已读未处理</option>
+							<option value="Confirmed" >已接单</option>
+							<option value="Refused" >已拒单</option>
+							<option value="Canceled" >已取消</option>
+						</select>
+					</div>
+					<label class="col-sm-1 control-label">订单号码：</label>
+					<div class="col-sm-2">
+						<input type="text" class="form-control" name="orderNo" id="orderNo">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-1 control-label">下单日期：</label>
+					<div class="col-sm-4 form-inline">
+						<input class="form-control form-control-datetime" type="text" id="sendStartDate" name="sendStartDate">
+						-
+						<input class="form-control form-control-datetime" type="text" id="sendEndDate" name="sendEndDate">
+					</div>
+					<label class="col-sm-1 control-label">房型：</label>
+					<div class="col-sm-3">
+						<select class="form-control form-control-select" name="changeType" id="changeType">
+							<option value="-1" selected>全部</option>
+						</select>
+					</div>
+					<label class="col-sm-1 control-label">客人电话：</label>
+					<div class="col-sm-2">
+						<input type="text" class="form-control" name="userPhone" id="userPhone">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-offset-9 col-sm-1 control-label">客人姓名：</label>
+					<div class="col-sm-2">
+						<input type="text" class="form-control" name="userName" id="userName">
+					</div>
+				</div>
+				<div class="form-group text-center">
+					<input type="hidden" name="whichButton" id="j-formtype" value="0"/>
+					<button class="btn btn-success j-btnsubmit" type="button" data-type="0"><i class="icon icon-search"></i> 查询</button>
+					<button type="button" class="btn" data-toggle="reset">重置</button>
+					<button class="btn btn-primary j-btnsubmit" type="button" data-type="1"><i class="icon icon-download-alt"></i> 导出到Excel</button>
+				</div>
+				</form>
+				<div class="datalist">
+					<div class="doc-subtitle"><h5>订单查询列表</h5></div>
+					<table class="table table-hover table-condensed table-vm" id="j-orderlist">
+						<colgroup>
+							<col width="130" span="2">
+							<col>
+							<col width="120" span="6">
+							<col width="150">
+						</colgroup>
+						<thead>
+							<th>订单号</th>
+							<th>订单状态</th>
+							<th>房型</th>
+							<th>选房</th>
+							<th>入离时间</th>
+							<th>下单时间</th>
+							<th>订单总额</th>
+							<th>客人留言</th>
+							<th>客人信息</th>
+							<th>操作</th>
+						</thead>
+						<tbody>
+							<tr data-orderno="33" data-itemid="3434">
+								<td><a href="">5211790517580</a></td>
+								<td><span data-state="0" class="j-pickup cursor label label-success">未消费</span></td>
+								<td>海景大床房（双早）</td>
+								<td>已选1703房</td>
+								<td>2016-01-05<br />2016-01-06 <br />共7晚</td>
+								<td>2016-02-02 14:34</td>
+								<td><span class="text-price">￥ 3434</span></td>
+								<td>元</td>
+								<td>吴仪去 <br /> 13412345678</td>
+								<td class="action"><a href="">接单</a><a href="">拒单</a> <br /><a href="">打印</a><a href="">详情</a></td>
+							</tr>
+							<tr data-orderno="33" data-itemid="3434">
+								<td><a href="">5211790517580</a></td>
+								<td><span data-state="0" class="j-pickup cursor label label-success">未消费</span></td>
+								<td>海景大床房（双早）</td>
+								<td>已选1703房</td>
+								<td>2016-01-05<br />2016-01-06 <br />共7晚</td>
+								<td>2016-02-02 14:34</td>
+								<td><span class="text-price">￥ 3434</span></td>
+								<td>元</td>
+								<td>吴仪去 <br /> 13412345678</td>
+								<td class="action"><a href="">接单</a><a href="">拒单</a> <br /><a href="">打印</a><a href="">详情</a></td>
+							</tr>
+							<tr data-orderno="33" data-itemid="3434">
+								<td><a href="">5211790517580</a></td>
+								<td><span data-state="0" class="j-pickup cursor label label-success">未消费</span></td>
+								<td>海景大床房（双早）</td>
+								<td>已选1703房</td>
+								<td>2016-01-05<br />2016-01-06 <br />共7晚</td>
+								<td>2016-02-02 14:34</td>
+								<td><span class="text-price">￥ 3434</span></td>
+								<td>元</td>
+								<td>吴仪去 <br /> 13412345678</td>
+								<td class="action"><a href="">接单</a><a href="">拒单</a> <br /><a href="">打印</a><a href="">详情</a></td>
+							</tr>
+							<tr data-orderno="33" data-itemid="3434">
+								<td><a href="">5211790517580</a></td>
+								<td><span data-state="0" class="j-pickup cursor label label-success">未消费</span></td>
+								<td>海景大床房（双早）</td>
+								<td>已选1703房</td>
+								<td>2016-01-05<br />2016-01-06 <br />共7晚</td>
+								<td>2016-02-02 14:34</td>
+								<td><span class="text-price">￥ 3434</span></td>
+								<td>元</td>
+								<td>吴仪去 <br /> 13412345678</td>
+								<td class="action"><a href="">接单</a><a href="">拒单</a> <br /><a href="">打印</a><a href="">详情</a></td>
+							</tr>
+							<tr data-orderno="33" data-itemid="3434">
+								<td><a href="">5211790517580</a></td>
+								<td><span data-state="0" class="j-pickup cursor label label-success">未消费</span></td>
+								<td>海景大床房（双早）</td>
+								<td>已选1703房</td>
+								<td>2016-01-05<br />2016-01-06 <br />共7晚</td>
+								<td>2016-02-02 14:34</td>
+								<td><span class="text-price">￥ 3434</span></td>
+								<td>元</td>
+								<td>吴仪去 <br /> 13412345678</td>
+								<td class="action"><a href="">接单</a><a href="">拒单</a> <br /><a href="">打印</a><a href="">详情</a></td>
+							</tr>
+							<tr data-orderno="33" data-itemid="3434">
+								<td><a href="">5211790517580</a></td>
+								<td><span data-state="0" class="j-pickup cursor label label-success">未消费</span></td>
+								<td>海景大床房（双早）</td>
+								<td>已选1703房</td>
+								<td>2016-01-05<br />2016-01-06 <br />共7晚</td>
+								<td>2016-02-02 14:34</td>
+								<td><span class="text-price">￥ 3434</span></td>
+								<td>元</td>
+								<td>吴仪去 <br /> 13412345678</td>
+								<td class="action"><a href="">接单</a><a href="">拒单</a> <br /><a href="">打印</a><a href="">详情</a></td>
+							</tr>
+							<tr data-orderno="33" data-itemid="3434">
+								<td><a href="">5211790517580</a></td>
+								<td><span data-state="0" class="j-pickup cursor label label-success">未消费</span></td>
+								<td>海景大床房（双早）</td>
+								<td>已选1703房</td>
+								<td>2016-01-05<br />2016-01-06 <br />共7晚</td>
+								<td>2016-02-02 14:34</td>
+								<td><span class="text-price">￥ 3434</span></td>
+								<td>元</td>
+								<td>吴仪去 <br /> 13412345678</td>
+								<td class="action"><a href="">接单</a><a href="">拒单</a> <br /><a href="">打印</a><a href="">详情</a></td>
+							</tr>
+							<tr data-orderno="33" data-itemid="3434">
+								<td><a href="">5211790517580</a></td>
+								<td><span data-state="0" class="j-pickup cursor label label-success">未消费</span></td>
+								<td>海景大床房（双早）</td>
+								<td>已选1703房</td>
+								<td>2016-01-05<br />2016-01-06 <br />共7晚</td>
+								<td>2016-02-02 14:34</td>
+								<td><span class="text-price">￥ 3434</span></td>
+								<td>元</td>
+								<td>吴仪去 <br /> 13412345678</td>
+								<td class="action"><a href="">接单</a><a href="">拒单</a> <br /><a href="">打印</a><a href="">详情</a></td>
+							</tr>
+							<tr data-orderno="33" data-itemid="3434">
+								<td><a href="">5211790517580</a></td>
+								<td><span data-state="0" class="j-pickup cursor label label-success">未消费</span></td>
+								<td>海景大床房（双早）</td>
+								<td>已选1703房</td>
+								<td>2016-01-05<br />2016-01-06 <br />共7晚</td>
+								<td>2016-02-02 14:34</td>
+								<td><span class="text-price">￥ 3434</span></td>
+								<td>元</td>
+								<td>吴仪去 <br /> 13412345678</td>
+								<td class="action"><a href="">接单</a><a href="">拒单</a> <br /><a href="">打印</a><a href="">详情</a></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="doc-pager">						
+	<ul class="pager">
+		<li class="previous"><a href=""><i class="icon icon-double-angle-left"></i></a></li>
+		<li class="previous"><a href="">上一页</a></li>
+		<li><a href="">1</a></li>
+		<li><a href="">2</a></li>
+		<li><a href="">3</a></li>
+		<li><a href="">4</a></li>
+		<li class="active"><a href="">5</a></li>
+		<li><a href="">6</a></li>
+		<li><a href="">7</a></li>
+		<li><a href="">8</a></li>
+		<li><a href="">9</a></li>
+		<li><a href="">10</a></li>
+		<li class="next"><a href="">下一页</a></li>
+		<li class="previous"><a href=""><i class="icon icon-double-angle-right"></i></a></li>
+	</ul>
+</div>
+				</div>
+			</div>
+		</main>
+		<div class="doc-footer">
+	<div class="pagewraper">
+			中华人民共和国增值电信业务经营许可证 经营许可证编号：粤B2-20130613
+			<br />
+			旅行社业务经营许可证编号：L-GD01685
+			<br />
+			版权所有  广州酷旅旅行社有限公司 2009-2015 粤ICP备11008339号
+	</div>
+</div>
+	</div>
+</body>
+<script>
+var pageGlobal = {
+	host: ""
+}
+</script>
+<script src="http://cdn7.jinxidao.com/dvb/admin/js/common_de9.js"></script>
+</html>

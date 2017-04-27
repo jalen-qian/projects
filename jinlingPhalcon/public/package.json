@@ -1,0 +1,29 @@
+{
+  "name": "DVB",
+  "version": "0.1.0",
+  "description": "DVB",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://git.oschina.net/xxxx"
+  },
+  "author": {
+    "name": "YCF-FE"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "childish-process": "*",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-clean": "*",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-content-includer": "0.0.7",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "*",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.8",
+    "run-sequence": "*"
+  }
+}

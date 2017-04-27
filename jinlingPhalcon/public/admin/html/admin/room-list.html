@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+	<link href="http://cdn7.jinxidao.com/dvb/admin/css/common_6fe.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="http://cdn7.jinxidao.com/dvb/admin/js/ieonly_15a.js"></script>
+	<link href="http://cdn7.jinxidao.com/dvb/proxy/cross-domain/respond-proxy-html.html" id="respond-proxy" rel="respond-proxy" />
+	<link href="/proxy/local/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+	<script src="/proxy/local/respond.proxy.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div class="doc">
+		<div class="doc-header">
+	<div class="pagewraper">
+		<div class="logoblock">
+			<a href="" class="link">凤池岛度假酒店</a>
+			管理后台
+		</div>
+		<div class="userblock">
+			<span class="loginname">欢迎您，<span>长隆酒店集团</span></span>
+			<a href="" class="logout">[退出]</a>
+		</div>
+	</div>
+</div>
+<div class="doc-menu">
+	<div class="mainmenu">
+		<div class="pagewraper">
+			<a href="" class="current">首页</a>
+			<a href="">订单管理</a>
+			<a href="">房态维护</a>
+			<a href="">消费券管理</a>
+			<a href="">财务管理</a>
+			<a href="">用户管理</a>
+			<a href="">模板管理</a>
+			<a href="">配置项管理</a>
+		</div>
+	</div>
+	<div class="secondmenu">
+		<div class="pagewraper">
+			<a href="" class="current">券记录查询</a>
+			<a href="">批量生成券号</a>
+			<a href="">票号导入</a>
+		</div>
+	</div>
+</div>
+		<main class="doc-main">
+			<div class="doc-content pagewraper">
+				<div class="doc-title header-dividing">页面标题</div>
+				<form class="form-inline mb50" name="searchForm" id="searchForm" method="get" action="">
+					<div class="form-group">
+						<label for="orderNo">楼层：</label>
+						<select name="" id="" class="form-control form-control-select">
+							<option value="0" selected>请选择楼层</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="customerPhone">房型：</label>
+						<select name="" id="" class="form-control form-control-select">
+							<option value="0" selected>请选择房型</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="customerName">房间编号：</label>
+						<input type="text" class="form-control" name="customerName" id="customerName">
+					</div>
+					<div class="form-group">
+						<label for="customerName">日期：</label>
+						<input class="form-control form-control-datetime" type="text" id="sendEndDate" name="sendEndDate">
+					</div>
+					<div class="form-group">
+						<button class="btn btn-success j-btnsubmit" type="button" data-type="0"><i class="icon icon-search"></i> 查询</button>
+						<button type="button" class="btn" data-toggle="reset">重置</button>
+					</div>
+				</form>
+				<div class="datalist">
+					<div class="doc-subtitle"><h5>房间列表</h5></div>
+					<div class="btn-group mb20">
+						<a class="btn btn-primary" href="">未安排的房间</a>
+						<a class="btn" href="">全部房间</a>
+					</div>
+					<table class="table table-hover table-condensed table-vm" id="j-orderlist">
+						<colgroup>
+							<col span="8">
+						</colgroup>
+						<thead>
+							<th>楼层</th>
+							<th>房型</th>
+							<th>房间编号</th>
+							<th>入住客人</th>
+							<th>选房时间</th>
+							<th>选房人</th>
+							<th>房间状态</th>
+							<th>操作</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2F</td>
+								<td>海景大床房</td>
+								<td>1012</td>
+								<td>李大超</td>
+								<td>2016-07-02 14:32</td>
+								<td>客人自选</td>
+								<td>已安排</td>
+								<td><a href="javascript:;" class="j-change">更改</a></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="doc-pager">						
+	<ul class="pager">
+		<li class="previous"><a href=""><i class="icon icon-double-angle-left"></i></a></li>
+		<li class="previous"><a href="">上一页</a></li>
+		<li><a href="">1</a></li>
+		<li><a href="">2</a></li>
+		<li><a href="">3</a></li>
+		<li><a href="">4</a></li>
+		<li class="active"><a href="">5</a></li>
+		<li><a href="">6</a></li>
+		<li><a href="">7</a></li>
+		<li><a href="">8</a></li>
+		<li><a href="">9</a></li>
+		<li><a href="">10</a></li>
+		<li class="next"><a href="">下一页</a></li>
+		<li class="previous"><a href=""><i class="icon icon-double-angle-right"></i></a></li>
+	</ul>
+</div>
+				</div>
+			</div>
+			<div class="modal fade" id="modalmdeal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">×</button>
+							<div class="modal-title">安排房间</div>
+						</div>
+						<div class="modal-body">
+							<ul>
+								<li>楼层：2F</li>
+								<li>房型：海景大床房</li>
+								<li>房间编号：1703</li>
+							</ul>
+							<form id="modalform" class="form-horizontal">
+								<div class="form-group">
+									<div class="col-md-8 col-md-offset-3">
+										<label class="radio-inline"><input type="radio" name="is_exce" value="1"> 直销渠道客人</label>
+										<label class="radio-inline"><input type="radio" name="is_exce" value="1"> 其他渠道客人</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-3 control-label required" for="providerId">客人</label>
+									<div class="col-md-8">
+										<select name="" id="" class="form-control">
+											<option value="">请选择客人</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-3 control-label required" for="providerId">入离时间</label>
+									<div class="col-md-8 form-inline">
+										<p class="form-control-static">2016-07-07 至 2016-07-09</p>
+											<input class="form-control form-control-datetime" type="text" id="from" name="from">
+											至
+											<input class="form-control form-control-datetime" type="text" id="from" name="from">
+										<p class="text-red">该房间于2016-07-08 已被预约</p>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-primary" id="btnsubmit">提交</button>
+							<button data-dismiss="modal" class="btn btn-default">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<div class="doc-footer">
+	<div class="pagewraper">
+			中华人民共和国增值电信业务经营许可证 经营许可证编号：粤B2-20130613
+			<br />
+			旅行社业务经营许可证编号：L-GD01685
+			<br />
+			版权所有  广州酷旅旅行社有限公司 2009-2015 粤ICP备11008339号
+	</div>
+</div>
+	</div>
+</body>
+<script>
+var pageGlobal = {
+	host: ""
+}
+</script>
+<script src="http://cdn7.jinxidao.com/dvb/admin/js/common_de9.js"></script>
+</html>

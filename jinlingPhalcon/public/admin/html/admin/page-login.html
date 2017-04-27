@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+	<link href="http://cdn7.jinxidao.com/dvb/admin/css/common_6fe.css" rel="stylesheet">
+	<link href="http://cdn7.jinxidao.com/dvb/admin/css/login_ea2.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="http://cdn7.jinxidao.com/dvb/admin/js/ieonly_15a.js"></script>
+	<link href="http://cdn7.jinxidao.com/dvb/proxy/cross-domain/respond-proxy-html.html" id="respond-proxy" rel="respond-proxy" />
+	<link href="/proxy/local/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+	<script src="/proxy/local/respond.proxy.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="doc doc-login">
+	<div class="login-form">
+		<div class="form">
+			<div class="adminlogo"></div>
+			<form id="loginForm" action="" method="post">
+				<div class="formitem">
+					<input type="text" class="form-ipt" id="loginform_user" name="userName" placeholder="请输入登录账号">
+				</div>
+				<div class="formitem">
+					<input type="password" class="form-ipt" id="loginform_pass" name="userPassword" placeholder="请输入登录密码">
+					<div class="errormsg"><i class="icon icon-warning-sign"></i> 请输入密码</div>
+				</div>
+				<div class="formitem">
+					<a href="javascript:;" class="captchaimg" id="captchaimg" title="点击换图"><img src="/admin/public/captcha?v=564e9b9d57282" onclick="this.src='/admin/public/captcha?&v='+Math.random()"></a>
+					<input type="text" class="form-ipt form-ipt-cap" id="loginform_capt" name="captcha" placeholder="请输入验证码">
+				</div>
+				<div class="action">
+					<button class="subbtn" type="submit">登录</button>
+					<a href="/admin/public/forget" class="forget">忘记密码</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+var pageVariable = {
+}
+</script>
+<script>
+var pageGlobal = {
+	host: ""
+}
+</script>
+<script src="http://cdn7.jinxidao.com/dvb/admin/js/common_de9.js"></script>
+<script src="http://cdn7.jinxidao.com/dvb/admin/js/login_6db.js"></script>
+</html>

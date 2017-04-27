@@ -1,0 +1,199 @@
+﻿ [v-cloak] { display: none; }
+ 
+.imgfull {
+    width: 100%;
+    display: block;
+}
+
+@mixin transition($property, $duration, $timing, $delay) {
+    -moz-transition: $property $duration $timing $delay; /* Firefox 4 */
+    -webkit-transition: $property $duration $timing $delay; /* Safari 和 Chrome */
+    -o-transition: $property $duration $timing $delay; /* Opera */
+    transition: $property $duration $timing $delay;
+}
+@mixin transform($css) {
+    -webkit-transform: $css; /* Safari 和 Chrome */
+    -o-transform: $css;  /* Opera */
+    -moz-transform: $css;
+    transform: $css;
+}
+a,
+button,
+input,
+optgroup,
+select,
+textarea {
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@function px2rem($px) {
+    $rem: 40;
+    @return ($px/$rem) + rem;
+}
+
+.fn-left {
+    float: left;
+}
+
+.fn-right {
+    float: right;
+}
+
+.fn-clear:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: "";
+    clear: both;
+    height: 0
+}
+
+.fn-clear {
+    clear: both;
+    zoom: 1
+}
+
+//color
+$cb:#4f8eed !important;
+$cba:#1d8dff !important;
+$ca:#1e262f !important;
+$co:#ff7c2d !important;
+$cg:#48cb4e !important;
+$cr:#ff6262 !important;
+$cbg:#eee !important;
+$cl:#ddd !important;
+$clc:#f8f8f8 !important;
+$cf1:#222 !important;
+$cf2:#666 !important;
+$cf3:#999 !important;
+$cf4:#ccc !important;
+$baseFontSize:20px !default;
+// pixels to rems 
+@function pxToRem($px) {
+    @return $px / $baseFontSize /2*1rem;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot?v=123');
+    /* IE9*/
+    src: url('../fonts/iconfont.eot?v=123#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/iconfont.woff') format('woff'), /* chromeã€firefox */
+    url('../fonts/iconfont.ttf') format('truetype'), /* chromeã€firefoxã€operaã€Safari, Android, iOS 4.2+*/
+    url('../fonts/iconfont.svg#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 1rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    color: #1d8dff;
+    // vertical-align: middle;
+}
+
+
+.icon-back:before { content: "\e600"; }
+.icon-telephone:before { content: "\e601"; }
+.icon-home:before { content: "\e602"; }
+.icon-order:before { content: "\e603"; }
+.icon-password:before { content: "\e604"; }
+.icon-message:before { content: "\e605"; }
+.icon-nocheckb:before { content: "\e606"; }
+.icon-checkb:before { content: "\e607"; }
+.icon-bed:before { content: "\e608"; }
+.icon-time:before { content: "\e609"; }
+.icon-address:before { content: "\e60a"; }
+.icon-date:before { content: "\e60b"; }
+.icon-picture:before { content: "\e60c"; }
+.icon-close:before { content: "\e60d"; }
+.icon-retract:before { content: "\e60e"; }
+.icon-open:before { content: "\e60f"; }
+.icon-arrowtop:before { content: "\e610"; }
+.icon-arrowbottom:before { content: "\e611"; }
+.icon-arrowright:before { content: "\e612"; }
+.icon-arrowleft:before { content: "\e613"; }
+.icon-nocheck:before { content: "\e614"; }
+.icon-check:before { content: "\e615"; }
+.icon-hotel:before { content: "\e616"; }
+.icon-reduce:before { content: "\e617"; }
+.icon-increase:before { content: "\e618"; }
+.icon-homehotel:before { content: "\e61a"; }
+.icon-tips:before { content: "\e61b"; }
+.icon-doubt:before { content: "\e61c"; }
+.icon-selected:before { content: "\e61d"; }
+.icon-routine_success:before { content: "\e61e"; }
+.icon-fail:before { content: "\e61f"; }
+.icon-success:before { content: "\e620"; }
+.icon-phone:before { content: "\e621"; }
+.icon-eye:before { content: "\e622"; }
+.icon-routine_fail:before { content: "\e623"; }
+.icon-homeorder:before { content: "\e624"; }
+.icon-homecontact:before { content: "\e625"; }
+.icon-homeintroduce:before { content: "\e626"; }
+.icon-homeuser:before { content: "\e627"; }
+.icon-homepicture:before { content: "\e628"; }
+
+.iconfont:hover {
+    color: #4f8eed;
+}
+
+.bar .button-link {
+    color: #333333 !important;
+}
+
+header {
+    background: #fff;
+    box-shadow: 0 .05rem .1rem rgba(0, 0, 0, .2);
+    border-bottom: 0px !important;
+    padding: 0 pxToRem(16px) !important;
+    h1 {
+        font-size: pxToRem(36px) !important;
+    }
+}
+
+.bar .button-nav.pull-left {
+    margin-left: 0 !important;
+}
+
+.bar .button.pull-left {
+    margin-left: 0 !important;
+}
+
+.bar .button-nav.pull-right {
+    margin-right: 0 !important;
+}
+
+.bar .button.pull-right {
+    margin-left: 0 !important;
+}
+
+
+// toast Ô²½Ç
+.toast {
+    border-radius: .25rem !important;
+}
+
+.popupBox{
+    @include transform(translate(0px,100%));
+    @include transition(all, 0.3s, ease, 0s);
+}
+.popupBox_show{
+    @include transform(translate(0px,0));
+}
+
+
+@media screen and (max-width: 320px) {
+  input { font-size: .5rem !important; }
+}
+
+

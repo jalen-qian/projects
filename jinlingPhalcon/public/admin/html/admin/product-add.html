@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+	<link href="http://cdn7.jinxidao.com/dvb/admin/css/common_6fe.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="http://cdn7.jinxidao.com/dvb/admin/js/ieonly_15a.js"></script>
+	<link href="http://cdn7.jinxidao.com/dvb/proxy/cross-domain/respond-proxy-html.html" id="respond-proxy" rel="respond-proxy" />
+	<link href="/proxy/local/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+	<script src="/proxy/local/respond.proxy.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div class="doc">
+		<div class="doc-header">
+	<div class="pagewraper">
+		<div class="logoblock">
+			<a href="" class="link">凤池岛度假酒店</a>
+			管理后台
+		</div>
+		<div class="userblock">
+			<span class="loginname">欢迎您，<span>长隆酒店集团</span></span>
+			<a href="" class="logout">[退出]</a>
+		</div>
+	</div>
+</div>
+<div class="doc-menu">
+	<div class="mainmenu">
+		<div class="pagewraper">
+			<a href="" class="current">首页</a>
+			<a href="">订单管理</a>
+			<a href="">房态维护</a>
+			<a href="">消费券管理</a>
+			<a href="">财务管理</a>
+			<a href="">用户管理</a>
+			<a href="">模板管理</a>
+			<a href="">配置项管理</a>
+		</div>
+	</div>
+	<div class="secondmenu">
+		<div class="pagewraper">
+			<a href="" class="current">券记录查询</a>
+			<a href="">批量生成券号</a>
+			<a href="">票号导入</a>
+		</div>
+	</div>
+</div>
+		<main class="doc-main">
+			<div class="doc-content pagewraper">
+				<div class="doc-title header-dividing">页面标题</div>
+				<form class="mb50" name="searchForm" id="searchForm" method="get" action="">
+					<div class="form-horizontal mb0">
+						<div class="form-group">
+							<label class="col-md-2 control-label" for="tradeNo">房型名称</label>
+							<div class="col-md-2">
+								<input class="form-control" type="text" id="tradeNoShow" name="Trade[tradeNoShow]" disabled="disabled">
+							</div>
+							<label class="col-md-2 control-label required" for="totalAmount">房型别名（内部使用）</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control" id="totalAmount" name="Trade[totalAmount]" />
+							</div>
+							<label class="col-md-2 control-label required" for="totalAmount">状态</label>
+							<div class="col-md-2">
+								<select name="Trade[tradeStatus]" class="form-control">
+									<option value="1">上线</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">房间面积</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control" id="itemName" name="Trade[itemName]">
+							</div>
+							<label class="col-md-2 control-label" for="productName">床型</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control" id="productName" name="Trade[productName]" />
+							</div>
+							<label for="itemName" class="col-md-2 control-label">床型尺寸</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control" id="itemName" name="Trade[itemName]">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">早餐</label>
+							<div class="col-md-2">
+								<select class="form-control" disabled="disabled">
+								    <option>不含早</option>
+								</select>
+							</div>
+							<label class="col-md-2 control-label">窗户</label>
+							<div class="col-md-2">
+								<select class="form-control" disabled="disabled">
+								    <option>有</option>
+								</select>
+							</div>
+							<label class="col-md-2 control-label">楼层</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control" id="itemName" name="Trade[itemName]">
+							</div>
+						</div>
+						<hr />
+						<div class="form-group">
+							<label class="col-sm-2 control-label">上网/电话</label>
+							<div class="col-sm-10">
+								<div class="checkbox-inline"><label><input type="checkbox" value="1"> wifi</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" value="1"> 有线宽带</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" value="1"> 收费宽带</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" value="1"> 国际长途电话</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" value="1"> 国内长途电话</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" value="1"> 市内电话</label></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">电器设施</label>
+							<div class="col-sm-10">
+								<div class="checkbox-inline"><label><input type="checkbox" value="1"> 空调</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" value="1"> 电视</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" value="1"> 冰箱</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" value="1"> 洗衣机</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" value="1"> 电热水壶</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" value="1"> 音箱</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" value="1"> 电脑</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" value="1"> 咖啡机</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" value="1"> 暖气</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" value="1"> 电热毯</label></div>
+							</div>
+						</div>
+						<hr />
+						<div class="form-group">
+							<label class="col-md-2 control-label">房间相册</label>
+							<div class="col-md-10">
+								<span id="j-updateopen" class="webuploader-wrap"><button class="btn btn-success btn-md">添加图片</button></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label"></label>
+							<div class="col-md-10">
+								<div class="cards" id="imglist"></div>
+							</div>
+						</div>
+					</div>
+					<div class="text-center">
+						<button class="btn btn-primary" type="submit">保存</button>
+						<a href="" class="btn">取消</a>
+					</div>
+				</form>
+			</div>
+		</main>
+		<div class="doc-footer">
+	<div class="pagewraper">
+			中华人民共和国增值电信业务经营许可证 经营许可证编号：粤B2-20130613
+			<br />
+			旅行社业务经营许可证编号：L-GD01685
+			<br />
+			版权所有  广州酷旅旅行社有限公司 2009-2015 粤ICP备11008339号
+	</div>
+</div>
+	</div>
+</body>
+<script>
+var pageGlobal = {
+	host: ""
+}
+</script>
+<script src="http://cdn7.jinxidao.com/dvb/admin/js/common_de9.js"></script>
+</html>
