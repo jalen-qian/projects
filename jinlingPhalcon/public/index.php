@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 date_default_timezone_set('Asia/Shanghai');
 
 define('APP_PATH', realpath('..'));
-define('YII_ENV_APP_NAME', 'dvb.yaochufa.com');
+define('YII_ENV_APP_NAME', 'jinling.jalen.com');
 define('LIBRARY_PATH', realpath('../app/library'));
 
 if (PHP_OS == 'WINNT') {
