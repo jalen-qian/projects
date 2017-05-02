@@ -1,9 +1,0 @@
-.idea
-.DS_Store
-public/node_modules/
-public/.sass-cache/
-public/gulpfile.js
-.idea/
-*.map
-/public/gulpfile.js
-/public/dvbEnv.php

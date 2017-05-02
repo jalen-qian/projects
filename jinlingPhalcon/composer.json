@@ -1,5 +1,0 @@
-{
-    "require": {
-        "lokielse/omnipay-wechatpay": "dev-master"
-    }
-}
